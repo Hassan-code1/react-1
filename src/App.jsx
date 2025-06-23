@@ -4,17 +4,20 @@ import Counter from './components/Counter'
 import Card from './components/Card'
 import ButtonCard from './components/ButtonCard'
 import React from 'react'
-// import LoginButton from './components/LoginButton'
-// import LogoutButton from './components/LogoutButton'
 import Log from './components/log'
+// import { useEffect } from 'react'
 // import Navbar from  './components/navbar.jsx'
+
+
+
 function App() {
   const desc = "This is a short bio about the user. It gives a brief overview of their interests and background."
   const [count, setCount] = React.useState(0);
   function handleClick() {
     setCount(count + 1);
   }
-  const[isLoggedIn, setIsLoggedIn] = React.useState(true);
+
+  const[isLoggedIn, setIsLoggedIn] = React.useState(false);
   return (
     <div className='app-container'>
       < Log isLoggedIn={isLoggedIn} useState={setIsLoggedIn}/>
